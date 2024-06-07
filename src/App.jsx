@@ -1,9 +1,10 @@
 import { BrowserRouter as Roter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import About from './components/About';
-import Header from './components/Navbar';
-import '../src/components/Home.css'
+import Home from './pages/Home';
+import About from './pages/About';
+import Header from './pages/Navbar';
+import './pages/Home.css'
+import Destination from './pages/Destination';
 function App() {
   return (
     <>
@@ -12,6 +13,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}></Route>
           <Route path='/about' element={<About />}></Route>
+          <Route path='/destination' element={<Destination />}></Route>
         </Routes>
       </Roter>
     </>

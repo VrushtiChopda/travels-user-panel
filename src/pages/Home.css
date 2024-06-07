@@ -2,6 +2,10 @@
     color: rgb(159, 224, 203);
 }
 
+.main-bold-color{
+    color: rgb(76, 236, 185);
+}
+
 .carousel-item img {
     max-height: 800px;
     object-fit: cover;
@@ -29,16 +33,31 @@
 }
 
 .card {
-    width: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 300px;
+    margin-bottom: 10px;
 }
 
 .card-body {
     flex: 1;
     overflow-y: auto;
+}
+
+.destination-container {
+    position: relative;
+    font-weight: bolder;
+    /* color: white; */
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.tour-badge {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+
 }
 
 .destiRow {
@@ -52,8 +71,25 @@
 }
 
 .main-footer {
+    font-size: 14px;
     background-color: #011431;
     color: white;
+}
+
+.main-footer span {
+    font-weight: bold;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-container {
+    background-color: #192b47;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 7px;
 }
 
 @media (max-width: 990px) {
@@ -63,7 +99,17 @@
 }
 
 @media (max-width : 790px) {
+    .features {
+        display: flex;
+        justify-content: center;
+    }
+
     .packages {
+        display: flex;
+        justify-content: center;
+    }
+
+    .guides {
         display: flex;
         justify-content: center;
     }
