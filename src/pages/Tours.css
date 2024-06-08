@@ -1,0 +1,15 @@
+.tour-image {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.tourList span {
+    font-size: 13px
+}
+
+.tourImageContainer img {
+
+    width: 100%;
+}

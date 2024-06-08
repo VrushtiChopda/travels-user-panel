@@ -3,8 +3,12 @@ import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+    const navigate = useNavigate()
+    const handleBooking = () => {
+        navigate('/tours')
+    }
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary">
@@ -21,7 +25,7 @@ const Header = () => {
                             <Nav.Link href="contact">Contact us</Nav.Link>
                         </Nav>
                         <Nav>
-                            <button className='btn' style={{ background: 'rgb(159, 224, 203)' }}>Book now</button>
+                            <button className='btn' style={{ background: 'rgb(159, 224, 203)' }} onClick={handleBooking}>Book now</button>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

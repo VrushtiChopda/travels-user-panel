@@ -30,11 +30,15 @@
 .image-container1 {
     position: relative;
     width: 100%;
+    min-height: 310px;
 }
 
 .image-container1 img {
     width: 100%;
     height: auto;
+    opacity: 0.3;
+    /* min-width: 300px; */
+    min-height: 300px;
 }
 
 .title-overlay1 {

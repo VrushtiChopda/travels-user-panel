@@ -1,0 +1,12 @@
+.container p {
+    margin: 0;
+}
+
+.contact-icons {
+    font-size: 50px;
+}
+
+.detail-button {
+    color: white;
+    background-color: rgb(159, 224, 203) !important; 
+}

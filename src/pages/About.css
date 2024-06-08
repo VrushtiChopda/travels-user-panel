@@ -1,0 +1,23 @@
+span {
+    font-size: 13px;
+}
+
+.aboutUs {
+    font-size: 13px;
+}
+
+.aboutUsImg {
+    width: 550px !important;
+}
+
+.aboutUsImg img {
+    width: 100%;
+
+}
+
+.aboutImg img {
+    object-fit: cover;
+    max-height: 650px !important;
+    width: 100%;
+    border-radius: 10px;
+}

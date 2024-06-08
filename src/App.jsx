@@ -5,15 +5,19 @@ import About from './pages/About';
 import Header from './pages/Navbar';
 import './pages/Home.css'
 import Destination from './pages/Destination';
+import Tours from './pages/Tours';
+import ContactUs from './pages/ContactUs';
 function App() {
   return (
     <>
       <Roter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />}></Route>
-          <Route path='/about' element={<About />}></Route>
-          <Route path='/destination' element={<Destination />}></Route>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/destination' element={<Destination />} />
+          <Route path='/tours' element={<Tours />} />
+          <Route path='/contact' element={<ContactUs />}/>
         </Routes>
       </Roter>
     </>
