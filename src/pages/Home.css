@@ -13,7 +13,11 @@
 
 .f-icons {
     text-align: center;
+}
+
+.f-icons svg {
     color: rgb(159, 224, 203);
+
 }
 
 .f-links {

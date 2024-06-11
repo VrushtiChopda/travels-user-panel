@@ -9,6 +9,7 @@ import { FaMoneyCheckDollar } from 'react-icons/fa6'
 const About = () => {
     return (
         <>
+        <div className='about-page'></div>
             <h1 className='text-center p-5'>About Us</h1>
             <div className="container">
                 <div className="row">

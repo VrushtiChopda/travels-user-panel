@@ -48,7 +48,7 @@ const CoreFeatures = () => {
                             <Col lg={3} md={6} key={index} className='features' >
                                 <Card className=''>
                                     <Card.Body className='border border-1'>
-                                        <Card.Title className="f-icons">{coreFeature.icon}</Card.Title>
+                                        <Card.Title className="f-icons fs-1 card-icons">{coreFeature.icon}</Card.Title>
                                         <Card.Subtitle className="card-subtitle">{coreFeature.title}</Card.Subtitle>
                                         <Card.Text className="card-text">
                                             {coreFeature.desc}

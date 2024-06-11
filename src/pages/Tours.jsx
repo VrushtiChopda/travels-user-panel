@@ -25,7 +25,7 @@ const Tours = () => {
                 <h1 className='text-center m-4'>Tour List</h1>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 mb-4">
+                        {/* <div className="col-lg-3 mb-4">
                             <div>
                                 <h3>Categories Types</h3>
                                 <hr className='w-25 mb-4' />
@@ -62,34 +62,8 @@ const Tours = () => {
                                     <label htmlFor='LongTime'>8 to 10 days</label>
                                 </div>
                             </div>
-                        </div>
-                        {/* <div className="col-lg-9">
-                            <Container>
-                                <Row>
-                                    {tours && tours.data.map((tour, index) => (
-                                        <Col lg={12} md={6} sm={12} xs={12} key={index} className='mb-4'>
-                                            <div className='d-flex flex-column flex-lg-row justify-content-between align-items-start'>
-                                                <div className='flex-shrink-0 mb-3 mb-lg-0 tourImafeContainer'>
-                                                    <img src={tour.imageUrl} className='tour-image' alt={tour.name} />
-                                                </div>
-                                                <div className='ms-lg-3'>
-                                                    <span >{tour.duration}</span>
-                                                    <h3 className='mb-0'>{tour.name}</h3>
-                                                    <span className='mt-0' ><FaLocationDot /> {tour.destination}</span>
-                                                    <p className='mt-3'>{tour.longDescription}</p>
-                                                </div>
-                                                <div className='mt-3 mt-lg-0 flex-grow-1'>
-                                                    <h5 className='m-0'>{tour.price}</h5>
-                                                    <p className='m-0'><span>per adult</span></p>
-                                                    <Button className='btn btn-sm'>View Details</Button>
-                                                </div>
-                                            </div>
-                                        </Col>
-                                    ))}
-                                </Row>
-                            </Container>
-                        </div>  */}
-                        <div className="col-lg-9">
+                        </div> */}
+                        <div className="col-lg-12">
                             <Container>
                                 <Row>
                                     {tours && tours.data.map((tour, index) => (
