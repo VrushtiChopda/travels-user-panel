@@ -6,8 +6,11 @@ import Titles from '../Component/title/Titles';
 import sectionbg1 from '../assets/sectionbg1.png'
 import Footer from './Footer';
 import './Tours.css'
+import { useNavigate } from 'react-router-dom';
 const Tours = () => {
+    const navigate = useNavigate()
     const [tours, setTours] = useState(null)
+
     useEffect(() => {
         const tourPackage = async () => {
             const data = await getTourData()
@@ -19,6 +22,11 @@ const Tours = () => {
             tourPackage()
         }
     }, [tours])
+
+    const viewDetails = (tour) => {
+        console.log(tour, "------------ data --------------------")
+        navigate('/tourdetails', { state: { tour } })
+    }
     return (
         <>
             <div className='tourList'>
@@ -71,18 +79,18 @@ const Tours = () => {
                                             <Row>
 
                                                 <div className='col-lg-4 tourImageContainer'>
-                                                    <img src={tour.imageUrl} className='tour-image' alt={tour.name} />
+                                                    <img src={tour.imageUrl} className='tour-image object-fit-cover rounded' alt={tour.name} />
                                                 </div>
                                                 <div className=' col-lg-6 '>
                                                     <span >{tour.duration}</span>
                                                     <h3 className='mb-0'>{tour.name}</h3>
                                                     <span className='mt-0' ><FaLocationDot /> {tour.destination}</span>
-                                                    <p className='mt-3'>{tour.longDescription}</p>
+                                                    <p className='mt-3'>{tour.description}</p>
                                                 </div>
                                                 <div className='col-lg-2'>
                                                     <h5 className='m-0'>{tour.price}</h5>
                                                     <p className='m-0'><span>per adult</span></p>
-                                                    <Button className='btn btn-sm'>View Details</Button>
+                                                    <button className='btn btn-sm' style={{ background: 'rgb(159, 224, 203)' }} onClick={() => viewDetails(tour)}>View Details</button>
                                                 </div>
 
                                             </Row>

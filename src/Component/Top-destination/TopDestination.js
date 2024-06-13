@@ -17,24 +17,24 @@ const TopDestination = () => {
                 <div className='container  '>
                     <div className="row">
                         <div className='col-lg-4 col-sm-12 mb-3 destination-container' >
-                            <img src={destination} className='w-100 h-100' alt='zxcsdfvdfbfgbnfgn' style={{ borderRadius: '10px' }} />
+                            <img src={destination} className='w-100 h-100 rounded' alt='zxcsdfvdfbfgbnfgn' />
                             <h1 className='top-left mb-5'>Goa</h1>
                             <h3 className='top-left mt-5 mb-3'>goa</h3>
                         </div>
                         <div className='col-lg-8 col-sm-12' >
                             <div className='mb-3 destination-container'>
-                                <img src={destination1} alt='xcsdcsvdfgdh' style={{ maxWidth: '100%', minWidth: '200px', borderRadius: '10px' }} />
+                                <img src={destination1} alt='xcsdcsvdfgdh' className='destination-image rounded' />
                                 <h1 className='top-left mb-5'>Goa</h1>
                                 <h3 className='top-left mt-5 mb-3'>goa</h3>
                             </div>
-                            <div className='col-lg-12 col-sm-12 d-flex destination-img destination-container' >
-                                <div className='w-100 h-100 me-3 mb-3' >
-                                    <img src={destination3} alt='asxsacxsdacsadc' style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
+                            <div className='col-lg-12 col-sm-12 d-lg-flex destination-img destination-container' >
+                                <div className='w-100 me-0 h-100 me-lg-3 mb-3' >
+                                    <img src={destination3} alt='asxsacxsdacsadc' className='w-100 destination-image rounded' />
                                     <h1 className='top-left mb-5'>Goa</h1>
                                     <h3 className='top-left mt-5 mb-3'>goa</h3>
                                 </div>
                                 <div className='w-100 mb-3 destination-container text-white' >
-                                    <img src={destination4} alt='sdcsdvs' style={{ maxWidth: '100%', maxHeight: '100%', borderRadius: '10px' }} />
+                                    <img src={destination4} alt='sdcsdvs' className='destination-image rounded' />
                                     <h1 className='top-left mb-5'>Goa</h1>
                                     <h3 className='top-left mt-5 mb-3'>goa</h3>
                                 </div>

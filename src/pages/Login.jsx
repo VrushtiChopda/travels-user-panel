@@ -20,67 +20,68 @@ const Login = () => {
     return (
         <>
             <div className="d-flex justify-content-center">
-                <Paper elevation={6} className='main-container'>
-                    <h1 className='text-center'>Sign In</h1>
-                    <Formik
-                        initialValues={{ email: '', password: '' }}
-                        validationSchema={loginSchema}
-                        onSubmit={handleLogin}
-                    >
-                        {({ handleSubmit, isSubmitting, touched, errors }) => (
-                            <form onSubmit={handleSubmit}>
-                                <Grid container spacing={2}>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            as={TextField}
-                                            variant="outlined"
-                                            margin="normal"
-                                            fullWidth
-                                            id="email"
-                                            label="Email Address"
-                                            name="email"
-                                            autoComplete="email"
-                                            error={touched.email && Boolean(errors.email)}
-                                            helperText={<ErrorMessage name="email" />}
-                                        />
+                <center>
+                    <Paper elevation={6} className='main-container'>
+                        <h1 className='text-center'>Sign In</h1>
+                        <Formik
+                            initialValues={{ email: '', password: '' }}
+                            validationSchema={loginSchema}
+                            onSubmit={handleLogin}
+                        >
+                            {({ handleSubmit, isSubmitting, touched, errors }) => (
+                                <form onSubmit={handleSubmit}>
+                                    <Grid container spacing={2}>
+                                        <Grid item xs={12}>
+                                            <Field
+                                                as={TextField}
+                                                variant="outlined"
+                                                margin="normal"
+                                                fullWidth
+                                                id="email"
+                                                label="Email Address"
+                                                name="email"
+                                                autoComplete="email"
+                                                error={touched.email && Boolean(errors.email)}
+                                                helperText={<ErrorMessage name="email" />}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12}>
+                                            <Field
+                                                as={TextField}
+                                                variant="outlined"
+                                                margin="normal"
+                                                fullWidth
+                                                id="password"
+                                                label="Password"
+                                                name="password"
+                                                type="password"
+                                                autoComplete="current-password"
+                                                error={touched.password && Boolean(errors.password)}
+                                                helperText={<ErrorMessage name="password" />}
+                                            />
+                                        </Grid>
+                                        <Grid xs={12} className='d-flex justify-content-end'>
+                                            <Link to='/email' className='forgotPass'>Forgot Password?</Link>
+                                        </Grid>
+                                        <Grid item xs={12} className='text-center' >
+                                            <Button
+                                                type="submit"
+                                                variant="outlined"
+                                                size="large"
+                                                disabled={isSubmitting}
+                                            >
+                                                Log In
+                                            </Button>
+                                        </Grid>
+                                        <Grid className="d-flex justify-content-center h-100 w-100">
+                                            <p>Not Registered yet ? <Link to='/registration' className='loginLink'>Register now</Link></p>
+                                        </Grid>
                                     </Grid>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            as={TextField}
-                                            variant="outlined"
-                                            margin="normal"
-                                            fullWidth
-                                            id="password"
-                                            label="Password"
-                                            name="password"
-                                            type="password"
-                                            autoComplete="current-password"
-                                            error={touched.password && Boolean(errors.password)}
-                                            helperText={<ErrorMessage name="password" />}
-                                        />
-                                    </Grid>
-                                    <Grid xs={12} className='d-flex justify-content-end'>
-                                        <Link to='/email' className='forgotPass'>Forgot Password?</Link>
-                                    </Grid>
-                                    <Grid item xs={12} className='text-center' >
-                                        <Button
-                                            type="submit"
-                                            variant="outlined"
-                                            size="large"
-                                            disabled={isSubmitting}
-                                        >
-                                            Log In
-                                        </Button>
-                                    </Grid>
-
-                                    <Grid className='ms-4 mt-2 '>
-                                        {/* <p>Not Registered yet ? <Link to='/' className='loginLink'>Register now</Link></p> */}
-                                    </Grid>
-                                </Grid>
-                            </form>
-                        )}
-                    </Formik>
-                </Paper>
+                                </form>
+                            )}
+                        </Formik>
+                    </Paper>
+                </center>
             </div>
         </>
     )

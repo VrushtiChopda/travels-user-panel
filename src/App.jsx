@@ -10,6 +10,8 @@ import ContactUs from './pages/ContactUs';
 import Login from './pages/Login';
 import Registration from './pages/Registration';
 import Otp from './pages/Otp';
+import TourDetails from './pages/TourDetails';
+import Booking from './pages/Booking';
 function App() {
   return (
     <>
@@ -24,6 +26,8 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/registration' element={<Registration />} />
           <Route path='/otp' element={<Otp />} />
+          <Route path='/tourdetails' element={<TourDetails />} />
+          <Route path='/booking' element={<Booking />} />
         </Routes>
       </Roter>
     </>

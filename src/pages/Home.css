@@ -2,10 +2,6 @@
     color: rgb(159, 224, 203);
 }
 
-.main-bold-color {
-    color: rgb(76, 236, 185);
-}
-
 .carousel-item img {
     max-height: 800px;
     object-fit: cover;
@@ -49,6 +45,11 @@
     position: relative;
     font-weight: bolder;
     /* color: white; */
+}
+
+.destination-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .top-left {

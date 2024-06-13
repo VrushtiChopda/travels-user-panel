@@ -1,8 +1,6 @@
 .tour-image {
     height: 250px;
     width: 250px;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 .tourList span {
@@ -10,6 +8,9 @@
 }
 
 .tourImageContainer img {
-
     width: 100%;
+}
+
+.details-card {
+    background-color: rgb(238, 235, 235) !important;
 }
