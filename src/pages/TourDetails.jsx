@@ -6,16 +6,30 @@ import sectionbg1 from '../assets/sectionbg1.png'
 import Footer from './Footer';
 import './Tours.css'
 import { FaRegCalendarAlt } from "react-icons/fa";
+
 const TourDetails = () => {
     const navigate = useNavigate()
-
     const location = useLocation()
     const { tour } = location.state;
-
     const [numberOfPeople, setNumberOfPeople] = useState(1)
 
+    const id = tour._id
+    const price = tour.price
+    const totalPrice = tour.price * numberOfPeople
+    const token = localStorage.getItem("token")
     const instantBooking = () => {
-        navigate('/booking')
+        if (token) {
+            navigate('/bookings', {
+                state: {
+                    packId: id,
+                    numberOfPeople: numberOfPeople,
+                    price: price,
+                    totalPrice: totalPrice
+                }
+            })
+        } else {
+            navigate('/login')
+        }
     }
     return (
         <>
@@ -60,7 +74,7 @@ const TourDetails = () => {
                                     <div className='p-3 mt-3 bg-white rounded-2'>
                                         <div className='d-flex justify-content-between'>
                                             <p>Per Person</p>
-                                            <p>{tour.price}</p>
+                                            <p>{price}</p>
                                         </div>
                                         <div className='mb-3 d-flex justify-content-between'>
                                             <p>Other Fees</p>
@@ -69,7 +83,7 @@ const TourDetails = () => {
                                         <hr className='m-1' />
                                         <div className='d-flex justify-content-between fw-bold'>
                                             <p>Total</p>
-                                            <p>{tour.price * numberOfPeople}</p>
+                                            <p>{totalPrice}</p>
                                         </div>
                                         <hr className='m-1' />
                                         <div><span>Note : </span>Click Instant book and add passanger details</div>

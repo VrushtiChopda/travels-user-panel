@@ -11,7 +11,8 @@ import Login from './pages/Login';
 import Registration from './pages/Registration';
 import Otp from './pages/Otp';
 import TourDetails from './pages/TourDetails';
-import Booking from './pages/Booking';
+import Bookings from './pages/Bookings';
+
 function App() {
   return (
     <>
@@ -27,7 +28,7 @@ function App() {
           <Route path='/registration' element={<Registration />} />
           <Route path='/otp' element={<Otp />} />
           <Route path='/tourdetails' element={<TourDetails />} />
-          <Route path='/booking' element={<Booking />} />
+          <Route path='/bookings' element={<Bookings />} />
         </Routes>
       </Roter>
     </>

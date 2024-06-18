@@ -3,18 +3,25 @@ import './Login.css'
 import { Button, Grid, Paper, TextField } from '@mui/material';
 import { ErrorMessage, Field, Formik } from 'formik';
 // import { ToastContainer, toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { object, string } from 'yup';
 import { loginDetails } from '../services/Services';
 const Login = () => {
+
+    const navigate = useNavigate()
+
     const loginSchema = object({
         email: string().email().required("Email is required"),
         password: string().min(6, "Password should be of minimum 6 characters length").max(10, "Password should be of maximum 10 characters length").required("Password is required")
     });
     const handleLogin = async (data) => {
-        // console.log(data, "<-------------------------------login log data context ---------------------------->")
+        console.log(data, "<-------------------------------login log data context ---------------------------->")
         const res = await loginDetails(data)
-        // console.log(res.data, '--------------login data-------------------------')
+        console.log(res, '------------login response --------------')
+        console.log(res.data.token)
+        localStorage.setItem('token', res.data.token)
+        navigate('/bookings')
+
     }
 
     return (

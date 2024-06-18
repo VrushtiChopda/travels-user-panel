@@ -1,4 +1,15 @@
 import axios from "axios";
+
+//------------------- slider -------------------------------
+
+export const sliderDetails = async (data) => {
+    const sliderData = await axios.get('http://localhost:2000/api/slider/getDetail', data)
+        // console.log(sliderData.data, "datadtata")
+        .then((res) => { return res })
+    // .catch((err) => { console.log(err) })
+    return sliderData
+}
+
 // ---------------Destination Page----------------------
 
 export const getDestinationData = async () => {
@@ -15,7 +26,7 @@ export const getTourData = async () => {
     const tourData = await axios.get('http://localhost:2000/api/package/getPackage')
         .then((res) => { return res })
         .catch((err) => { console.log(err) })
-    console.log(tourData.data, 'datadatadatadata')
+    console.log(tourData, 'datadatadatadata')
     return tourData;
 }
 
@@ -75,3 +86,17 @@ export const loginDetails = async (data) => {
         })
     return login
 }
+
+//--------------------- booking ---------------------------------
+
+export const bookingDetails = async (packId, values) => {
+    const userToken = localStorage.getItem('token')
+    console.log(userToken, 'userTokenuserTokenuserTokenuserToken')
+    const booking = await axios.post(`http://localhost:2000/api/booking/insertBookDetail/${packId}`, values, {
+        headers: {
+            Authorization: `Bearer ${userToken}`
+        }
+    })
+    console.log(booking.data, 'booking data')
+}
+
