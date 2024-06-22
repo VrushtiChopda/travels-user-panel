@@ -100,3 +100,11 @@ export const bookingDetails = async (packId, values) => {
     console.log(booking.data, 'booking data')
 }
 
+//---------------------- guide -------------------------------------
+
+export const GuideDetails = async () => {
+    const guide = await axios.get('http://localhost:2000/api/guide/getDetail')
+        .then((res) => { return res })
+        .catch((err) => { console.log(err) })
+    return guide
+}

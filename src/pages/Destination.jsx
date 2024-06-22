@@ -34,8 +34,8 @@ const Destination = () => {
                                 <div className='image-container'>
                                     <img src={dest.imageUrl} alt={dest.place} className='image' />
                                 </div>
-                                <h2 className='top-left mb-5'>{dest.state}</h2>
                                 <h5 className='top-left mt-5'>{dest.place}</h5>
+                                <h2 className='top-left mb-5'>{dest.state}</h2>
                             </div>
                         </Col>
                     ))}

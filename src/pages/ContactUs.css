@@ -8,5 +8,17 @@
 
 .detail-button {
     color: white;
-    background-color: rgb(159, 224, 203) !important; 
+    background-color: rgb(159, 224, 203) !important;
+}
+
+.map-img {
+    max-height: 500px;
+    width: 450px;
+    object-fit: cover;
+}
+
+@media (max-width : 990px) {
+    .map-img {
+        display: none;
+    }
 }

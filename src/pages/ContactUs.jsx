@@ -8,7 +8,7 @@ import { contactDetails } from '../services/Services';
 import { Formik } from 'formik';
 import { object, string } from 'yup';
 import { Button, Form } from 'react-bootstrap';
-
+import map from '../assets/map.jpeg'
 const ContactUs = () => {
     const initialValues = {
         firstname: '',
@@ -71,7 +71,9 @@ const ContactUs = () => {
             </div>
             <div className='container my-5'>
                 <div className="row">
-                    <div className="col-lg-6">Map</div>
+                    <div className="col-lg-6 d-flex justify-content-center " >
+                        <img src={map} alt="" className='map-img' style={{ }} />
+                    </div>
                     <div className="col-lg-6">
                         <Formik
                             initialValues={initialValues}
